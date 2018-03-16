@@ -1,0 +1,7 @@
+<!--component/test/test.wxml-->
+<view class='message-tab-pill'>
+  <view class="{{showControlData.isLeftSelected === true ? 'message-tab-sel' : 'message-tab'}}" data-side="left" bindtap='onTaptab'>{{leftSec}}</view>
+  <view class="{{showControlData.isLeftSelected === true ? 'message-tab' : 'message-tab-sel'}}" data-side="right" bindtap='onTaptab'>{{rightSec}}</view>
+</view>
+<slot wx:if='{{showControlData.isLeftSelected}}' name='left'></slot>
+<slot wx:if='{{!showControlData.isLeftSelected}}' name='right'></slot>

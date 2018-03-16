@@ -1,0 +1,34 @@
+/* component/test/test.wxss */
+.message-tab-pill {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #689DBC;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.message-tab {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: inherit;
+  padding: 0 10px;
+  color: #689DBC;
+  background-color: #fff;
+}
+
+.message-tab-sel {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: inherit;
+  padding: 0 10px;
+  color: #fff;
+  background-color: #689DBC;
+}
