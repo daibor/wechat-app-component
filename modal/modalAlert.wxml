@@ -1,0 +1,7 @@
+<!--component/modalAlert/modalAlert.wxml-->
+<view class='cover' bindtap='hideModal'>
+  <view class='modal-area' animation="{{animationData}}" catchtap='doNothing'>
+     <slot name="{{expectSlot}}"></slot> 
+    <!-- <slot name="invite"></slot> -->
+  </view>
+</view>

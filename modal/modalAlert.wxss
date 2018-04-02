@@ -1,0 +1,25 @@
+/* component/modalAlert/modalAlert.wxss */
+
+.cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-area{
+  box-sizing: border-box;
+  z-index: 101;
+  height: 0;
+  width: 80%;
+  background: #ffffff;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
