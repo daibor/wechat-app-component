@@ -1,9 +1,9 @@
 微信小程序组件
 ===
-平时做小程序造的一些小组件
+自己平时做小程序造的一些小组件，没什么技术含量:blush:
 ## 目录
- - [Capsule 两栏切换（胶囊）](##Capsule-胶囊切换)
- - [Modal 模态弹窗(##Modal-模态弹窗)
+ - [Capsule 两栏切换（胶囊）](#Capsule-胶囊切换)
+ - [Modal 模态弹窗](#Modal-模态弹窗)
 
 ## 基本使用
 以下组件使用，默认都需要在引入组件页面对应的JSON文件中配置自定义组件，例如
@@ -14,6 +14,7 @@
 ```
 
 可参考[微信官方教程](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
+
 ## Capsule 胶囊切换
 ![胶囊展示](https://i.loli.net/2018/03/16/5aabbec47f0d0.gif)
 
@@ -28,6 +29,7 @@
 
 ## Modal 模态弹窗
 ![模态展示](https://i.loli.net/2018/04/02/5ac210fcdd633.gif)
+
 点击灰色部分收回，白色部分设置了一个不冒泡的空事件函数。
 
 ### Usage
