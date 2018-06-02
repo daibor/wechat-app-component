@@ -1,0 +1,54 @@
+/* Component/foldBar/foldBar.wxss */
+
+.default-fold-ctn {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.default-unfold-ctn {
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+}
+
+.list-ctn {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 54rpx 0rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(229, 229, 229, 1);
+}
+
+.list-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.default-fold-arr {
+  width: 48rpx;
+  height: 48rpx;
+  padding-right: 15rpx;
+}
+
+.default-unfold-arr {
+  width: 48rpx;
+  height: 48rpx;
+  padding-right: 15rpx;
+}
+
+.list-icon {
+  height: 68rpx;
+  width: 68rpx;
+  padding:0 32rpx;
+}
+
+.list-text {
+  font-size: 36rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 42rpx;
+}

@@ -2,15 +2,17 @@
 ===
 自己平时做小程序造的一些小组件，没什么技术含量:blush:
 ## 目录
- - [Capsule 两栏切换（胶囊）](##Capsule胶囊切换)
- - [Modal 模态弹窗](##Modal模态弹窗)
+- [Capsule 两栏切换（胶囊）](##Capsule胶囊切换)
+- [Modal 模态弹窗](##Modal模态弹窗)
 
 ## 基本使用
 以下组件使用，默认都需要在引入组件页面对应的JSON文件中配置自定义组件，例如
 ```json
-	"usingComponents": {
-    	"capsule": "/component/capsule/capsule"
-  	}
+{
+  "usingComponents": {
+    "capsule": "/component/capsule/capsule"
+  }
+}
 ```
 
 可参考[微信官方教程](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
@@ -20,13 +22,25 @@
 
 ### Usage
 直接在页面的WXML中复制粘贴以下代码引入组件，两个view标签内部可插入或替换为内部展示页需要的元素。
+### Attribute
+| AttrName  |    Type   |   Description   |
+| :-------- | :--------:| :------: |
+| leftSec    |   *String* |  左侧文字  |
+| rightSec   |   *String* |  右侧文字  |
+
 **HTML**
 ```html
 <capsule leftSec='左标签名' rightSec='右标签名' >
-	<view slot='left'></view>
-	<view slot='right'></view>
+<view slot='left'></view>
+<view slot='right'></view>
 </capsule>
 ```
+
+## ListBar多功能列表控件
+例如微信发现页的列表组件
+
+## foldBar折叠bar组件
+提供了旋转左侧icon（例如箭头指向）在内的多种选择
 
 ## Modal模态弹窗
 ![模态展示](https://i.loli.net/2018/04/02/5ac210fcdd633.gif)
@@ -38,8 +52,8 @@
 **HTML**
 ```html
 <modalAlert wx:if="{{modalControl}}" bind:hide="controlModal" expectSlot="{{expectSlot}}">
-   <view slot="invite">invite</view> 
-   <view slot="vote">vote</view> 
+<view slot="invite">invite</view> 
+<view slot="vote">vote</view> 
 </modalAlert>
 
 <button bindtap="controlModal" data-slotName="invite">弹出模态窗口</button>
@@ -51,20 +65,20 @@ Page({
   data: {
     modalControl:false,
     expectSlot: ''
-  },
+    },
 
-  controlModal: function (e) {
-    console.log(e.currentTarget.dataset.slotname);
-    if(!this.data.modalControl){
-      this.setData({
-        expectSlot: e.currentTarget.dataset.slotname,
-      })
-    }
-    this.setData({
-      modalControl: !this.data.modalControl
-    })
-  }
+    controlModal: function (e) {
+      console.log(e.currentTarget.dataset.slotname);
+      if(!this.data.modalControl){
+        this.setData({
+          expectSlot: e.currentTarget.dataset.slotname,
+          })
+        }
+        this.setData({
+          modalControl: !this.data.modalControl
+          })
+        }
 
-  /*省略*/
-})
-```
+        /*省略*/
+        })
+        ```

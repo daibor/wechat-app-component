@@ -1,0 +1,29 @@
+<!--Component/listBar/listBar.wxml-->
+
+<view class='{{listtype}}' catchtap="{{foldBar == true ? 'onTapFoldbar' : ''}}">
+
+  <view wx:if="{{!isleftrow}}" class='listBar-left-c'>
+    <image wx:if="{{!nolefticon}}" src='{{lefticon}}' class='left-icon'></image>
+    <text class='left-text-m'>{{leftmain}}</text>
+    <text class='left-text-t'>{{lefttip}}</text>
+  </view>
+
+  <view wx:if="{{isleftrow}}" class='listBar-left-r'>
+    <image wx:if="{{!nolefticon}}" src='{{lefticon}}' class='left-icon'></image>
+    <text class='left-text-row'>{{leftrow}}</text>
+  </view>
+
+  <view class='listBar-right'>
+    <text class='right-text'>{{rightmain}}</text>
+    <!-- 显示条件有待修改 有foldBar和norighticon任一为true则为false，都为false则为true -->
+    <image wx:if="{{!(norighticon || foldBar)}}" src='{{righticon}}' class='right-icon'></image>
+
+    <image wx:if="{{foldBar}}" src="/Images/icon/arrow-right.png" class='{{defaultCSS.arr}}' animation="{{foldData.arrowAni}}"></image>
+  </view>
+  
+</view>
+
+
+<view wx:if="{{foldBar}}" class='{{defaultCSS.ctn}}' animation="{{foldData.areaAni}}">
+  <slot></slot>
+</view>

@@ -1,0 +1,129 @@
+/* Component/listBar/listBar.wxss */
+
+.default-fold-ctn {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.default-unfold-ctn {
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+}
+
+.default-fold-arr {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 14rpx;
+  flex: 0 0 auto;
+}
+
+.default-unfold-arr {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 14rpx;
+  transform: rotateZ(90deg);
+  flex: 0 0 auto;
+}
+
+/* listBar部件样式 */
+
+.listBar-thick {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 44rpx 24rpx 35rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.listBar-idp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 54rpx 0rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.listBar-dp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 54rpx 0rpx;
+  margin: 0 24rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.listBar-dp-nolast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 0rpx;
+  margin: 0 24rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.listBar-left-c {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+
+.listBar-left-r {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.left-text-m {
+  font-size: 30rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 42rpx;
+}
+
+.left-text-row {
+  font-size: 36rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 42rpx;
+  padding-left: 24rpx;
+}
+
+.listBar-right {
+  flex: 0 10 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.left-icon {
+  width: 90rpx;
+  height: 90rpx;
+  padding-left: 54rpx;
+  flex: 0 0 auto;
+}
+
+.right-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 14rpx;
+  flex: 0 0 auto;
+}
+
+.right-text {
+  width: 70rpx;
+  height: 42rpx;
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 42rpx;
+  padding-right: 30rpx;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+/* listBar样式截止 */

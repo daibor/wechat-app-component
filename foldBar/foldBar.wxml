@@ -1,0 +1,11 @@
+<!--Component/foldBar/foldBar.wxml-->
+<view class='list-ctn' catchtap='onTapFoldbar'>
+  <view class='list-left'>
+    <image wx:if="{{!noleftIcon}}" class='list-icon' src='{{listIcon}}'></image>
+    <text class='list-text'>{{listText}}</text>
+  </view>
+  <image src="{{rightIcon}}" class="default-fold-arr" style="{{defaultFold == false ? 'transform: rotateZ(' + rotateAngle + 'deg)' : ''}}" animation="{{foldData.arrowAni}}"></image>
+</view>
+<view class="{{defaultFold == true ? 'default-fold-ctn' : 'default-unfold-ctn'}}" animation="{{foldData.areaAni}}">
+  <slot></slot>
+</view>
