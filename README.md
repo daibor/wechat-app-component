@@ -73,12 +73,12 @@ Page({
         this.setData({
           expectSlot: e.currentTarget.dataset.slotname,
           })
-        }
+      }
         this.setData({
           modalControl: !this.data.modalControl
-          })
-        }
+        })
+    }
 
         /*省略*/
-        })
+})
         ```
